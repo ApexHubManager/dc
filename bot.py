@@ -195,6 +195,16 @@ def setup_database():
             ended INTEGER DEFAULT 0,
             winner_ids TEXT DEFAULT ''
         )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS invites (
+            guild INTEGER,
+            user INTEGER,
+            invited_user INTEGER,
+            joined_at TEXT,
+            left_at TEXT,
+            fake INTEGER DEFAULT 0
+        )
         """
     ]
 
